@@ -6,7 +6,10 @@ type Props = {
 };
 
 export default function ThemeProvider({ children }: Props) {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [colorTheme, setColorTheme] = useState<
+    "red" | "blue" | "yellow" | "green" | "orange" | "pink" | "strong-blue"
+  >("red");
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
@@ -24,6 +27,8 @@ export default function ThemeProvider({ children }: Props) {
     <ThemeContext.Provider
       value={{
         theme,
+        colorTheme,
+        setColorTheme,
         toggleTheme,
       }}
     >

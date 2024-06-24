@@ -1,3 +1,3 @@
 export default function App() {
-  return <div className="bg-slate-100 h-screen"></div>;
+  return <div className="text-primary-blue ">asd</div>;
 }
